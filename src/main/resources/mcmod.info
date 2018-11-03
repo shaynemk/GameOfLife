@@ -1,0 +1,16 @@
+[
+{
+  "modid": "gameoflife",
+  "name": "Game of Life",
+  "description": "Game of life, the cruelest of all games.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["shaynemk", "MmmCaramel"],
+  "credits": "Google, and all the tutorials/problems solved that it led to.",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

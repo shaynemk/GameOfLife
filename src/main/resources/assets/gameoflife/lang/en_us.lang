@@ -1,0 +1,12 @@
+# Creative Tab #
+itemGroup.Game of Life=Game of Life
+
+# Commands #
+#//commands.gameoflife.gol_cmd.usage=/gol <value>
+
+# Blocks #
+#//tile.gameoflife.gol_block.name=GoL Block
+
+# Items #
+#//item.gameoflife.gol_item.name=GoL Item
+item.gameoflife.toolRoughStonePickaxe.name=Rough Stone Pickaxe
