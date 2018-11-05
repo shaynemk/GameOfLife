@@ -8,7 +8,8 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import shaynemk.gameoflife.items.ToolRoughStonePickaxe;
+import shaynemk.gameoflife.tools.ToolFlintPickaxe;
+import shaynemk.gameoflife.recipes.RecipeHandler;
 
 @Mod.EventBusSubscriber
 public class CommonProxy {
@@ -31,7 +32,10 @@ public class CommonProxy {
         //event.getRegistry().register(new ItemBlock(ModBlocks.lamp).setRegistryName(ModBlocks.lamp.getRegistryName()));
         //event.getRegistry().register(new ItemWrench());
 
-        event.getRegistry().register(new ToolRoughStonePickaxe(Item.ToolMaterial.STONE));
+        event.getRegistry().register(new ToolFlintPickaxe());
     }
+
+    /*@SubscribeEvent
+    public static void registerRecipes(RegistryEvent.Register<Recipe>)*/
 }
 
