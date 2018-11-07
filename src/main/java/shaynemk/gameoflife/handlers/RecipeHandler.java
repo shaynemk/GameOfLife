@@ -1,4 +1,4 @@
-package shaynemk.gameoflife.recipes;
+package shaynemk.gameoflife.handlers;
 
 import com.google.common.collect.Lists;
 import net.minecraft.init.Blocks;
@@ -7,6 +7,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.registries.ForgeRegistry;
+import shaynemk.gameoflife.recipes.DummyRecipe;
 
 import java.util.ArrayList;
 

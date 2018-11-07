@@ -1,13 +1,17 @@
 package shaynemk.gameoflife;
 
+import net.minecraft.world.WorldType;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import org.apache.logging.log4j.Logger;
 import shaynemk.gameoflife.proxy.CommonProxy;
-import shaynemk.gameoflife.recipes.RecipeHandler;
+import shaynemk.gameoflife.handlers.RecipeHandler;
+import shaynemk.gameoflife.world.biomes.InitBiomes;
+import shaynemk.gameoflife.world.types.TestWorldType;
 
 @Mod(modid = GameOfLife.MODID, name = GameOfLife.NAME, version = GameOfLife.VERSION, useMetadata = true)
 public class GameOfLife {
@@ -18,11 +22,12 @@ public class GameOfLife {
     @SidedProxy(clientSide = "shaynemk.gameoflife.proxy.ClientProxy", serverSide = "shaynemk.gameoflife.proxy.ServerProxy")
     public static CommonProxy proxy;
 
-    private static Logger logger;
+    public static Logger logger;
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
         logger = event.getModLog();
+        InitBiomes.registerBiomes();
     }
 
     @EventHandler
@@ -32,5 +37,10 @@ public class GameOfLife {
 
         // welcome the masochists
         logger.info("Welcome to the desparate Game Of Life.");
+    }
+
+    @EventHandler
+    public void postInit(FMLPostInitializationEvent event) {
+        WorldType TEST = new TestWorldType();
     }
 }

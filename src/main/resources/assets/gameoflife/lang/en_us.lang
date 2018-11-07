@@ -9,4 +9,8 @@ itemGroup.Game of Life=Game of Life
 
 # Items #
 #//item.gameoflife.gol_item.name=GoL Item
-item.gameoflife.toolRoughStonePickaxe.name=Rough Stone Pickaxe
+item.gameoflife.toolFlintPickaxe.name=Flint Pickaxe
+
+
+# World Type #
+generator.TestWorldType=Test World Type
